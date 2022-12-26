@@ -54,6 +54,7 @@ services:
       - SYS_NICE  # CAP_SYS_NICE
     ports:
       - ${DOCKER_DB_EXTERNAL_PORT:-3306}:3306
+      - '8015:3306'
     environment:
       - MYSQL_ROOT_PASSWORD=${DOCKER_DB_ROOT_PASSWORD:-password}
     volumes:
