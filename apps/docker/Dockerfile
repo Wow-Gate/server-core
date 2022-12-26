@@ -7,7 +7,7 @@
 #
 #=================================================================
 
-FROM ubuntu:20.04 as base
+FROM arm64v8/ubuntu:20.04 as base
 ARG USER_ID=1000
 ARG GROUP_ID=1000
 ARG DOCKER_USER=acore
@@ -100,7 +100,7 @@ COPY --chown=$DOCKER_USER:$DOCKER_USER . /azerothcore
 #
 #=================================================================
 
-FROM ubuntu:20.04 as servicebase
+FROM arm64v8/ubuntu:20.04 as servicebase
 
 ARG USER_ID=1000
 ARG GROUP_ID=1000
@@ -259,7 +259,7 @@ COPY --chown=$DOCKER_USER:$DOCKER_USER --from=build /azerothcore/env/dist/bin/db
 #
 #=================================================================
 
-FROM ubuntu:20.04 as client-data
+FROM arm64v8/ubuntu:20.04 as client-data
 ARG USER_ID=1000
 ARG GROUP_ID=1000
 ARG DOCKER_USER=acore
@@ -296,7 +296,7 @@ USER $DOCKER_USER
 #
 #=================================================================
 
-FROM ubuntu:20.04 as tools
+FROM arm64v8/ubuntu:20.04 as tools
 ARG USER_ID=1000
 ARG GROUP_ID=1000
 ARG DOCKER_USER=acore
