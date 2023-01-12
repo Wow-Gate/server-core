@@ -32,7 +32,9 @@ It is written in C++ and is based on MaNGOS, TrinityCore and SunwellCore.
 
 Docker
 For GNU/Linux, install ([docker](https://docs.docker.com/install/linux/docker-ce/ubuntu))
+
 For macOS 10.12+ Sierra and newer, install ([Docker Desktop for Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac))
+
 For Windows 10, install ([Docker Desktop for](https://hub.docker.com/editions/community/docker-ce-desktop-windows))
 
 Before proceeding, make sure that docker has docker compose installed on your system by typing in a terminal:
@@ -61,7 +63,7 @@ git clone https://github.com/Wow-Gate/server-core.git
 ## Running the root folder
 
 ```bash
-#Compile AzerothCore
+# Compile AzerothCore
 ./acore.sh docker build
 
 # Download customer data
